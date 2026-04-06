@@ -1,0 +1,16 @@
+{
+    "perfil": {
+        "nome": "Maria Elaine Bonato dos Santos",
+        "idade": 15 
+    },
+    "endereco": {
+        "rua": "estrada da endoença",
+        "bairro": "Bateias",
+        "cep": "8360193"
+    },
+    "escolaridade": {
+        "escola": "Colégio Otalípio Pereira de Andrade",
+        "curso": "Desenvolvimento de Sistemas",
+        "conclusao": "2027"
+    }
+}
