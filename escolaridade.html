@@ -12,18 +12,19 @@
         onclick="window.location.href='index.html'">Voltar</button>
     </div>
     <script>
-         fetch("http://localhost:3000/perfil")
+         fetch("http://localhost:3000/escolaridade")
             .then(response => response.json())
-            .then(data => {
-            const perfilDiv = document.getElementById('perfil');
+            .then(escolaridade => {
+            const perfilDiv = document.getElementById('escolaridade');
             perfilDiv.innerHTML =
                 `<h2>${data.nome}</h2>
-                <p><strong>nome:</strong>${data.nome}</p>
-                <p><strong>idade:</strong>${data.idade} anos</p>
+                <p><strong>escola:</strong>${data.escola}</p>
+                <p><strong>curso:</strong>${data.curso}</p>
+                <p><strong>conclusao:</strong>${data.conclusao}</p>
                 <button class="back-button" onclick="window.location.href='index.html'">voltar</button>
             `;
         })
-        .catch(error => console.error('Erro ao carregar o perfil:', error));
+        .catch(error => console.error('Erro ao carregar a escolaridade:', error));
     </script>
 </body>
 </html>

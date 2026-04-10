@@ -12,18 +12,19 @@
         onclick="window.location.href='index.html'">Voltar</button>
     </div>
     <script>
-         fetch("http://localhost:3000/perfil")
+         fetch("http://localhost:3000/endereco")
             .then(response => response.json())
-            .then(data => {
+            .then(endereco => {
             const perfilDiv = document.getElementById('perfil');
             perfilDiv.innerHTML =
                 `<h2>${data.nome}</h2>
-                <p><strong>nome:</strong>${data.nome}</p>
-                <p><strong>idade:</strong>${data.idade} anos</p>
+                <p><strong>rua:</strong>${data.rua}</p>
+                <p><strong>bairro:</strong>${data.bairro}</p>
+                <p><strong>cep:</strong>${data.cep}</p>
                 <button class="back-button" onclick="window.location.href='index.html'">voltar</button>
             `;
         })
-        .catch(error => console.error('Erro ao carregar o perfil:', error));
+        .catch(error => console.error('Erro ao carregar o endereço:', error));
     </script>
 </body>
 </html>
